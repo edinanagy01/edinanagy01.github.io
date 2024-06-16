@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A horizontal bar chart showing the count of Netflix entries by Subscription Type.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/Netflix.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Subscription Type",
+      "type": "nominal",
+      "axis": {"title": "Subscription Type"}
+    },
+    "x": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "axis": {"title": "Count"}
+    }
+  },
+  "config": {}
+}
