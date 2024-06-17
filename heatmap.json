@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Faceted heatmap showing the count of users by Subscription Type, Gender, and Device.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/Netflix.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {"type": "rect", "tooltip": true},
+  "encoding": {
+    "x": {"field": "Gender", "type": "nominal", "title": "Gender"},
+    "y": {
+      "field": "Subscription Type",
+      "type": "nominal",
+      "title": "Subscription Type"
+    },
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "User Count"
+    },
+    "column": {"field": "Device", "type": "nominal", "title": "Device"}
+  },
+  "config": {"view": {"height": 500, "width": 600}}
+}
