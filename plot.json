@@ -30,7 +30,7 @@
     }
   },
   "config": {
-    "view": {"width": 600, "height": 400},
+    "view": {"width": 500, "height": 300},
     "axis": {"labelFontSize": 14, "titleFontSize": 16}
   }
 }
