@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Scatter plot showing Age vs Active Months with size representing User ID and color representing Subscription Type.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/Netflix_final.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {"type": "circle", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "Active Months",
+      "type": "quantitative",
+      "title": "Active Months"
+    },
+    "y": {
+      "field": "Age",
+      "type": "quantitative",
+      "title": "Age",
+      "scale": {"domain": [20, 55]}
+    },
+    "size": {"field": "User ID", "type": "quantitative", "title": "User ID"},
+    "color": {
+      "field": "Subscription Type",
+      "type": "nominal",
+      "title": "Subscription Type",
+      "scale": {
+        "domain": ["Basic", "Standard", "Premium"],
+        "range": ["#7CB9E8", "#00004D", "#2ca02c"]
+      }
+    }
+  },
+  "config": {
+    "view": {"width": 800, "height": 500},
+    "axis": {"labelFontSize": 14, "titleFontSize": 16}
+  }
+}
