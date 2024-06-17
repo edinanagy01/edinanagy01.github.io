@@ -7,20 +7,20 @@
   },
   "transform": [
     {
-      "aggregate": [{"op": "count", "field": "Gender", "as": "count"}],
-      "groupby": ["Gender"]
+      "aggregate": [{"op": "count", "field": "Country", "as": "count"}],
+      "groupby": ["Country"]
     }
   ],
   "mark": "arc",
   "encoding": {
     "theta": {"field": "count", "type": "quantitative", "stack": true},
     "color": {
-      "field": "Gender",
+      "field": "Country",
       "type": "nominal",
       "scale": {"range": ["#72A0C1", "#00308F"]}
     },
     "tooltip": [
-      {"field": "Gender", "type": "nominal", "title": "Gender"},
+      {"field": "Country", "type": "nominal", "title": "Country"},
       {"field": "count", "type": "quantitative", "title": "Count"}
     ]
   },
