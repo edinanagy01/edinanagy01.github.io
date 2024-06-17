@@ -49,6 +49,18 @@
         </div>
         <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
+
+  <section>
+        <div class="chart-description">
+            <h2>Section 1: A basic chart</h2>
+            <p> 
+                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
+                As a first example, we're using the basic chart from the previous session.
+            </p>
+    
+        </div>
+        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
   
     <script>
         // This is a comment in JavaScript - it's a different language to HTML and CSS
@@ -57,11 +69,13 @@
         var figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json";
         var figure_3_spec = "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/type.json"
         var figure_4_spec = "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/gender.json"
+        var figure_5_spec = "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/heatmap.json"
       
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
         vegaEmbed('#Location2', figure_2_spec)
         vegaEmbed('#Location3', figure_3_spec)
         vegaEmbed('#Location4', figure_4_spec)
+        vegaEmbed('#Location5', figure_5_spec)
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
