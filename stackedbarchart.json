@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Stacked Bar Chart of User Counts by Subscription Type and Country",
+  "description": "Stacked bar chart showing the count of users by Subscription Type and Country with custom colors.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/Netflix.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Country",
+      "axis": {"labelAngle": -45}
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Count of Users"
+    },
+    "color": {
+      "field": "Subscription Type",
+      "type": "nominal",
+      "title": "Subscription Type",
+      "scale": {
+        "range": [
+          "#00308F",
+          "#72A0C1",
+          "#008099",
+          "#ffff99",
+          "#386cb0",
+          "#f0027f",
+          "#bf5b17",
+          "#666666",
+          "#1b9e77",
+          "#d95f02"
+        ]
+      }
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {
+        "field": "Subscription Type",
+        "type": "nominal",
+        "title": "Subscription Type"
+      },
+      {"aggregate": "count", "type": "quantitative", "title": "Count of Users"}
+    ]
+  },
+  "config": {
+    "view": {"height": 400, "width": 800},
+    "axis": {"labelFontSize": 14, "titleFontSize": 16}
+  }
+}
