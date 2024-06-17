@@ -18,7 +18,7 @@
       "title": "Age",
       "scale": {"domain": [20, 55]}
     },
-    "size": {"field": "User ID", "type": "quantitative", "title": "User ID"},
+    "size": {"field": "Months Since Last Payment", "type": "quantitative", "title": "Months Since Last Payment"},
     "color": {
       "field": "Subscription Type",
       "type": "nominal",
