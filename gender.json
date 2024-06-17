@@ -1,22 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A horizontal bar chart showing the count of Netflix entries by Subscription Type.",
+  "description": "Pie chart showing the distribution of genders.",
   "data": {
     "url": "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/Netflix.csv",
     "format": {"type": "csv"}
   },
-  "mark": "bar",
-  "encoding": {
-    "y": {
-      "field": "Subscription Type",
-      "type": "nominal",
-      "axis": {"title": "Subscription Type"}
-    },
-    "x": {
-      "aggregate": "count",
-      "type": "quantitative",
-      "axis": {"title": "Count"}
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "field": "Gender", "as": "count"}],
+      "groupby": ["Gender"]
     }
+  ],
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "count", "type": "quantitative", "stack": true},
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {"range": ["#72A0C1", "#00308F"]}
+    },
+    "tooltip": [
+      {"field": "Gender", "type": "nominal", "title": "Gender"},
+      {"field": "count", "type": "quantitative", "title": "Count"}
+    ]
   },
   "config": {}
 }
