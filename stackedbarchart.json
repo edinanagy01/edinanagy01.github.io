@@ -49,7 +49,7 @@
     ]
   },
   "config": {
-    "view": {"height": 400, "width": 800},
+    "view": {"height": 350, "width": 700},
     "axis": {"labelFontSize": 14, "titleFontSize": 16}
   }
 }
