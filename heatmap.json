@@ -20,5 +20,5 @@
     },
     "column": {"field": "Device", "type": "nominal", "title": "Device"}
   },
-  "config": {"view": {"height": 500, "width": 600}}
+  "config": {"view": {"height": 400, "width": 250}}
 }
