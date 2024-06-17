@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Pie chart showing the distribution of genders.",
+  "description": "Pie chart showing the distribution of users by Country.",
   "data": {
     "url": "https://raw.githubusercontent.com/edinanagy01/edinanagy01.github.io/main/Netflix.csv",
     "format": {"type": "csv"}
@@ -17,7 +17,11 @@
     "color": {
       "field": "Country",
       "type": "nominal",
-      "scale": {"range": ["#72A0C1", "#00308F"]}
+      "scale": {
+        "range": [
+          "#6b9ec7", "#7eafc6", "#91c2d5", "#6a8b9f", "#7a9eb3", "#a3b8c7", "#6b9e76", "#7ea98e", "#a3c5a9", "#b6d8be"
+        ]
+      }
     },
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country"},
